@@ -1,0 +1,54 @@
+# src/config.py
+
+# Assets
+SYMBOLS = ["BTC/USDT:USDT", "ETH/USDT:USDT"]
+TIMEFRAME = "4h"
+HTF = "1d"
+
+# Regime (Trend) Filters
+EMA_HTF = 100       # Daily 100 EMA
+EMA_FAST = 50       # 4H 50 EMA
+EMA_SLOW = 200      # 4H 200 EMA
+
+# Quality Filters
+ADX_LEN = 14
+ADX_MIN = 20.0
+ATR_LEN = 14
+ATR_PCT_FLOOR = 0.004
+ATR_PCT_CEIL_MULT = 2.5
+ATR_MEDIAN_LEN = 100
+FUNDING_MAX_LONG = 0.0005
+FUNDING_MAX_SHORT = -0.0005
+
+# Entry Logic
+PULLBACK_EMA = 20
+PULLBACK_WINDOW = 5
+RSI_LEN = 14
+RSI_LONG_DIP = 45.0
+RSI_SHORT_DIP = 55.0
+
+# Stop Loss
+STOP_LOOKBACK = 20
+STOP_ATR_PAD = 0.25
+STOP_MAX_ATR = 3.0
+
+# Exits
+PARTIAL_R = 2.0             # REVERTED: Back to 2.0 (was the winning setting)
+CHANDELIER_ATR_LEN = 22
+CHANDELIER_MULT = 2.0       # REVERTED: Back to 2.0 (was the winning setting)
+TIME_STOP_CANDLES = 30
+TIME_STOP_MIN_R = 0.5
+
+# Sizing & Risk
+RISK_PER_TRADE = 0.005
+BUCKET_CAP = 0.01
+MAX_LEVERAGE = 3.0
+
+# Costs
+TAKER_FEE = 0.00055
+SLIPPAGE = 0.0005
+
+# Backtest Dates
+IS_START = "2020-01-01"
+IS_END = "2023-12-31"
+OOS_START = "2024-01-01"
